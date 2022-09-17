@@ -1,6 +1,6 @@
 import React from 'react'
 import { categories } from '../data'
-import "../styles/categories.scss"
+import "../styles/category.scss"
 import CategoryItem from './CategoryItem'
 
 const Categories = () => {

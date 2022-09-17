@@ -126,3 +126,36 @@ export const categories = [
     // }
 ]
 
+export const popularProducts = [
+    {
+        _id: 1,
+        image: "/images/hangover.jpg",
+    },
+    {
+        _id: 2,
+        image: "/images/bubletea.jpg",
+    },
+    {
+        _id: 3,
+        image: "/images/browniekutu.jpg",
+    },
+    {
+        _id: 4,
+        image: "/images/hangover.jpg",
+    }, {
+        _id: 5,
+        image: "/images/bubletea.jpg",
+    }, {
+        _id: 6,
+        image: "/images/browniekutu.jpg",
+    }, {
+        _id: 7,
+        image: "/images/hangover.jpg",
+    }, {
+        _id: 8,
+        image: "/images/browniekutu.jpg",
+    },
+
+
+
+]

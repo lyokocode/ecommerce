@@ -38,7 +38,7 @@ const Slider = () => {
             </button>
             <main className="wrapper">
 
-                <div className="slide" >
+                <div className="slide" style={{ backgroundColor: `#${bg}` }} >
 
                     <div className="image-container">
                         <img src={image} alt="" />
