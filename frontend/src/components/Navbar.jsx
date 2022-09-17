@@ -17,13 +17,13 @@ const Navbar = () => {
                 <div className='center'>
                     <h1 className='logo'>aelita.</h1>
                 </div>
-                <div className='right'>
+                <nav className='right'>
                     <div className="menu-item">REGISTER</div>
                     <div className="menu-item">SIGN IN</div>
                     <div className="menu-item notification"><AiOutlineShoppingCart />
                         <span className='badge'>3</span>
                     </div>
-                </div>
+                </nav>
             </div>
         </header>
     )
