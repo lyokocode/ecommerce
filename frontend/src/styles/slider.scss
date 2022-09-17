@@ -4,6 +4,7 @@
     display: flex;
     padding: 20px;
     position: relative;
+    background-color: #ecd5d5;
 
     .arrow {
         width: 50px;
@@ -49,7 +50,9 @@
                 height: 100%;
 
                 img {
-                    height: 70%;
+                    height: 80%;
+                    max-width: 600px;
+                    object-fit: cover;
                     border-radius: 3%;
                 }
             }
@@ -73,7 +76,7 @@
                     padding: 10px;
                     font-size: 20px;
                     background: transparent;
-                    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+                    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
                     cursor: pointer;
 
                 }

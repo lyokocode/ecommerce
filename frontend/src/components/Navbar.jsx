@@ -10,7 +10,7 @@ const Navbar = () => {
                 <div className='left'>
                     <div className='language'> <MdOutlineLanguage />TR</div>
                     <div className='search'>
-                        <input placeholder='sdas' type="text" />
+                        <input placeholder='search here...' type="text" />
                         <AiOutlineSearch className='search-icon' />
                     </div>
                 </div>

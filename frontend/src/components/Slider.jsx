@@ -1,21 +1,20 @@
 import React from 'react'
 import "../styles/slider.scss"
-import data from "../data"
+import { sliderItems } from "../data"
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
 import { useState } from 'react'
 
 const Slider = () => {
 
     const [index, setIndex] = useState(0)
-    const item = data.slide
-    const { name, desc, image } = item[index]
+    const { name, desc, image, bg } = sliderItems[index]
 
     const checkNumber = (number) => {
-        if (number > item.length - 1) {
+        if (number > sliderItems.length - 1) {
             return 0
         }
         if (number < 0) {
-            return item.length - 1
+            return sliderItems.length - 1
         }
         return number
     }
@@ -39,7 +38,7 @@ const Slider = () => {
             </button>
             <main className="wrapper">
 
-                <div className="slide">
+                <div className="slide" >
 
                     <div className="image-container">
                         <img src={image} alt="" />
