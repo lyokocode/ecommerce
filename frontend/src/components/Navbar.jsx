@@ -2,6 +2,7 @@ import React from 'react'
 import "../styles/navbar.scss"
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai"
 import { MdOutlineLanguage } from "react-icons/md"
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -14,10 +15,11 @@ const Navbar = () => {
                         <AiOutlineSearch className='search-icon' />
                     </div>
                 </div>
-                <div className='center'>
+                <Link to="/" className='center'>
                     <h1 className='logo'>aelita.</h1>
-                </div>
+                </Link>
                 <nav className='right'>
+                    <Link to="/about" className="menu-item">ABOUT</Link>
                     <div className="menu-item">REGISTER</div>
                     <div className="menu-item">SIGN IN</div>
                     <div className="menu-item notification"><AiOutlineShoppingCart />
