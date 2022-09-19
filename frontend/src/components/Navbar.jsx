@@ -9,7 +9,7 @@ const Navbar = () => {
         <header className='header-container'>
             <div className="header-wrapper">
                 <div className='left'>
-                    <div className='language'> <MdOutlineLanguage />TR</div>
+                    <div className='language'> <MdOutlineLanguage />EN</div>
                     <div className='search'>
                         <input placeholder='search here...' type="text" />
                         <AiOutlineSearch className='search-icon' />

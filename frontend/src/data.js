@@ -72,7 +72,7 @@ export const sliderItems = [
         id: 1,
         name: "Popular",
         image: "/images/hangover.jpg",
-        desc: "En çok sevilen tatlımızı henüz denemediniz mi?",
+        desc: "Haven't tried the most popular dessert yet??",
         bg: "f5fafd"
 
     },
@@ -87,7 +87,7 @@ export const sliderItems = [
         id: 3,
         name: "sımsıcak",
         image: '/images/latte.jpg',
-        desc: "soğuk havalarda lezzeti damağınızda kalırken içinizi ısıtacak lezzetler",
+        desc: "this drink will warm you up",
         bg: "fbf0f4"
     }
 ]
