@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Newsletter from './components/Newsletter';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
           <Routes >
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
           </Routes>
           <Newsletter />
           <Footer />
