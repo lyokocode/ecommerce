@@ -19,12 +19,12 @@ const Navbar = () => {
                     <h1 className='logo'>aelita.</h1>
                 </Link>
                 <nav className='right'>
-                    <Link to="/about" className="menu-item">ABOUT</Link>
+                    <Link to="about" className="menu-item">ABOUT</Link>
                     <Link to="register" className="menu-item">REGISTER</Link>
                     <Link to="login" className="menu-item">SIGN IN</Link>
-                    <div className="menu-item notification"><AiOutlineShoppingCart />
+                    <Link to="cart" className="menu-item notification"><AiOutlineShoppingCart />
                         <span className='badge'>3</span>
-                    </div>
+                    </Link>
                 </nav>
             </div>
         </header>
