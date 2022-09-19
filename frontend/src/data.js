@@ -113,17 +113,17 @@ export const categories = [
         category: "Coffee",
         image: "/images/latte.jpg",
     }
-    // ,
-    // {
-    //     _id: 5,
-    //     category: "Frozens",
-    //     image: "/images/ormanfrozen.jpg",
-    // },
-    // {
-    //     _id: 6,
-    //     category: "Smoothies",
-    //     image: "/images/cileksmoothie.jpg",
-    // }
+    ,
+    {
+        _id: 5,
+        category: "Frozens",
+        image: "/images/ormanfrozen.jpg",
+    },
+    {
+        _id: 6,
+        category: "Smoothies",
+        image: "/images/cileksmoothie.jpg",
+    }
 ]
 
 export const popularProducts = [
