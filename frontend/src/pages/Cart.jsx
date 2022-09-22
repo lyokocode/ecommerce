@@ -69,7 +69,7 @@ const Cart = () => {
                             <span className="text">Shipping Discount</span>
                             <span className="price">$-5.90</span>
                         </div>
-                        <div className="summary-item">
+                        <div className="summary-item total">
                             <span className="text">TOTAL</span>
                             <span className="price">$130</span>
                         </div>

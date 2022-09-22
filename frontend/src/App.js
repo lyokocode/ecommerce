@@ -13,7 +13,7 @@ const App = () => {
   return (
     <BrowserRouter >
       <div className='aelita'>
-        <Navbar />
+        {/* <Navbar /> */}
         <main className='route'>
 
           <Routes >

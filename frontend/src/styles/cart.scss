@@ -44,12 +44,12 @@
         .bottom {
             display: flex;
             justify-content: space-between;
+            padding: 15px;
 
             .info {
                 flex: 3;
 
                 .product {
-                    padding: 15px;
                     border-bottom: 1px solid #eee;
                     display: flex;
                     justify-content: space-between;
@@ -59,6 +59,7 @@
                         display: flex;
 
                         img {
+                            object-fit: cover;
                             width: 200px;
                             border-radius: 3%;
                         }
@@ -135,6 +136,88 @@
                     font-weight: 600;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .cart-container {
+        .wrapper {
+            .bottom {
+                flex-direction: column;
+
+                .info {
+                    .product {
+                        .product-detail {
+                            .details {
+                                font-size: 14px;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cart-container {
+        .wrapper {
+            .bottom {
+                flex-direction: column;
+
+                .info {
+                    .product {
+                        .product-detail {
+                            img {
+                                max-width: 100px;
+                            }
+
+                            .details {
+                                font-size: 10px;
+                            }
+                        }
+
+                        .price-detail {
+                            .product-amount {
+                                margin: 5px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .cart-container {
+        .wrapper {
+            .bottom {
+                .info {
+                    .product {
+                        .product-detail {
+                            img {
+                                max-width: 50px;
+                                height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .top {
+                .top-text {
+                    display: none;
+                }
+            }
+
+            .product-price {
+                margin-bottom: 20px;
+            }
+
         }
     }
 }

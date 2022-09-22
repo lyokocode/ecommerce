@@ -86,3 +86,17 @@
         }
     }
 }
+
+@media screen and (max-width: 950px) {
+    .footer-container {
+        flex-direction: column;
+
+        .footer-center {
+            display: none;
+        }
+
+        .footer-right {
+            background-color: lightgray;
+        }
+    }
+}
