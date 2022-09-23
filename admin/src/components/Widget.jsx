@@ -1,6 +1,5 @@
 import React from 'react'
 import "../styles/widget.scss"
-
 import { MdOutlineKeyboardArrowUp, MdOutlineShoppingCart, MdPersonOutline, MdOutlineAccountBalanceWallet, MdOutlineMonetizationOn } from "react-icons/md"
 
 const Widget = ({ type }) => {
