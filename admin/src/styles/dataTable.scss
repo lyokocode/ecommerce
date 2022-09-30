@@ -1,0 +1,53 @@
+.datatable {
+    height: 600px;
+    padding: 20px;
+    float: left;
+
+    table {
+        width: 100%;
+
+
+        th,
+        td {
+            text-align: left;
+            padding: 16px;
+        }
+
+
+        td {
+
+            img {
+                border-radius: 50%;
+                width: 50px;
+                object-fit: cover;
+            }
+
+        }
+
+        .cellWithStatus {
+            margin-top: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+                background: rgba(0, 128, 0, 0.5);
+                color: green;
+            }
+
+            &.pending {
+                background: rgba(255, 217, 0, 0.5);
+                color: goldenrod;
+            }
+
+            &.passive {
+                background: rgba(255, 0, 0, 0.5);
+                color: crimson;
+            }
+        }
+
+    }
+
+}
