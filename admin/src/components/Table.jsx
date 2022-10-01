@@ -22,6 +22,16 @@ const Table = () => {
             amount: 900,
             method: "online payment",
             status: "Pending"
+        },
+        {
+            id: 123257,
+            product: "playstation5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5IIkvmU884df0Kcwy6bU2wfsp9qobzxzKEts19oxbg&s",
+            customer: "odd",
+            date: "1 March",
+            amount: 900,
+            method: "online payment",
+            status: "Pending"
         }
     ]
 
@@ -47,6 +57,7 @@ const Table = () => {
                             <td>
                                 <div className="wrapper">
                                     <img src={row.img} alt="" />
+                                    <p>{row.product}</p>
                                 </div>
                             </td>
                             <td>{row.customer}</td>

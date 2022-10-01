@@ -7,6 +7,7 @@ export const userColumns = [
     { field: "image", headerName: "İmage", width: 120 },
     { field: "age", headerName: "Age", width: 100 },
     { field: "status", headerName: "Status", width: 100 },
+    { field: "action", headerName: "Action", width: 200 },
 ]
 
 export const userRows = [
@@ -14,7 +15,7 @@ export const userRows = [
         id: 1,
         username: "usakli",
         img: "https://pbs.twimg.com/profile_images/1562352061664182272/8X938uHE_400x400.jpg",
-        status: "active",
+        status: "passive",
         email: "mustafausakli_@hotmail.com",
         age: 23,
 
@@ -23,7 +24,7 @@ export const userRows = [
         id: 2,
         username: "altintop",
         img: "https://pbs.twimg.com/profile_images/1558738220669607937/9sDGFTlD_400x400.jpg",
-        status: "passive",
+        status: "active",
         email: "ismailaltintop@hotmail.com",
         age: 23,
 

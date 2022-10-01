@@ -4,22 +4,33 @@
     float: left;
 
     table {
+
         width: 100%;
 
+        .action {
+
+            button {
+                border: 0.5px solid #333;
+                padding: 5px;
+                border-radius: 5px;
+                margin: 0 5px;
+            }
+        }
 
         th,
         td {
             text-align: left;
             padding: 16px;
-        }
-
-
-        td {
 
             img {
                 border-radius: 50%;
                 width: 50px;
                 object-fit: cover;
+            }
+
+            input {
+                width: 15px;
+                height: 15px;
             }
 
         }
@@ -47,7 +58,5 @@
                 color: crimson;
             }
         }
-
     }
-
 }
