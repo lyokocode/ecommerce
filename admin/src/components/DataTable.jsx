@@ -26,8 +26,8 @@ const DataTable = () => {
                             <td>{row.age}</td>
                             <td className={`cellWithStatus ${row.status}`}>{row.status}</td>
                             <td className='action'>
-                                <button>view</button>
-                                <button>delete</button>
+                                <button className='view-btn'>view</button>
+                                <button className='delete-btn'>delete</button>
                             </td>
                         </tr>
                     ))}
