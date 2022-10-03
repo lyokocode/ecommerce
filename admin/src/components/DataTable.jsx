@@ -1,11 +1,18 @@
 import React from 'react'
 import "../styles/dataTable.scss"
 import { userColumns, userRows } from '../datatableSource'
+import { Link } from 'react-router-dom'
 
 const DataTable = () => {
 
     return (
         <div className='datatable'>
+            <div className="datatableTitle">
+                <h3> Add New User</h3>
+                <Link to="/users/new" className='link'>
+                    Add new
+                </Link>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -26,7 +33,9 @@ const DataTable = () => {
                             <td>{row.age}</td>
                             <td className={`cellWithStatus ${row.status}`}>{row.status}</td>
                             <td className='action'>
-                                <button className='view-btn'>view</button>
+                                <Link to="/users/test">
+                                    <button className='view-btn'>view</button>
+                                </Link>
                                 <button className='delete-btn'>delete</button>
                             </td>
                         </tr>

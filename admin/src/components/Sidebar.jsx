@@ -5,13 +5,16 @@ import { AiOutlineUser, AiFillCreditCard } from "react-icons/ai"
 import { SiHomeassistantcommunitystore } from "react-icons/si"
 import { FaTruck } from "react-icons/fa"
 import { BiStats, BiUserCircle } from "react-icons/bi"
+import { Link } from 'react-router-dom'
 
 
 const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className="top">
-                <span className="logo">aelita</span>
+                <Link to="/">
+                    <span className="logo">aelita</span>
+                </Link>
             </div>
             <div className="hr"></div>
             <div className="center">
@@ -22,14 +25,18 @@ const Sidebar = () => {
                         <span>Dashboard</span>
                     </li>
                     <p className="title">Lists</p>
-                    <li>
-                        <AiOutlineUser className="icon" />
-                        <span>Users</span>
-                    </li>
-                    <li>
-                        <SiHomeassistantcommunitystore className="icon" />
-                        <span>Products</span>
-                    </li>
+                    <Link to="/users">
+                        <li>
+                            <AiOutlineUser className="icon" />
+                            <span>Users</span>
+                        </li>
+                    </Link>
+                    <Link to="/products">
+                        <li>
+                            <SiHomeassistantcommunitystore className="icon" />
+                            <span>Products</span>
+                        </li>
+                    </Link>
                     <li>
                         <AiFillCreditCard className="icon" />
                         <span>Orders</span>
