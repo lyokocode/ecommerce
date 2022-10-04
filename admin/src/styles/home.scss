@@ -1,8 +1,11 @@
 .home {
     display: flex;
+    height: 100vh;
+    position: relative;
 
     .homeContainer {
         flex: 6;
+        overflow: scroll;
 
         .widgetContainer,
         .charts {
@@ -24,6 +27,11 @@
                 font-weight: 500;
                 color: gray;
                 margin-bottom: 15px;
+            }
+
+            .tableContainer {
+                display: flex;
+                gap: 10px;
             }
         }
     }

@@ -6,6 +6,7 @@ import Widget from '../components/Widget'
 import Featured from '../components/Featured'
 import Chart from '../components/Chart'
 import Table from '../components/Table'
+import UserNewTable from '../components/UserNewTable'
 
 const Home = () => {
     return (
@@ -25,7 +26,10 @@ const Home = () => {
                 </div>
                 <div className="listContainer">
                     <div className="listTitle">Latest Transactions</div>
-                    <Table />
+                    <div className='tableContainer'>
+                        <UserNewTable />
+                        <Table />
+                    </div>
                 </div>
             </div>
         </div>
