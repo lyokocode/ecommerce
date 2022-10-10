@@ -45,7 +45,7 @@ const Sidebar = () => {
                         <FaTruck className="icon" />
                         <span>Delivery</span>
                     </li>
-                    <p className="title">Uesful</p>
+                    <p className="title">Useful</p>
                     <li>
                         <BiStats className="icon" />
                         <span>Stats</span>

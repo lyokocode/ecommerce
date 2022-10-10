@@ -51,22 +51,22 @@
 
             &.user {
                 color: crimson;
-                background: rgba(255, 0, 0, 0.2);
+                background-color: rgba(255, 0, 0, 0.2);
             }
 
             &.shoppigCart {
                 color: crimson;
-                background: rgba(255, 0, 0, 0.2);
+                background-color: rgba(255, 0, 0, 0.2);
             }
 
             &.earning {
                 color: green;
-                background: rgba(0, 128, 0, 0.2);
+                background-color: rgba(0, 128, 0, 0.2);
             }
 
             &.balance {
                 color: purple;
-                background: rgba(128, 0, 128, 0.2);
+                background-color: rgba(128, 0, 128, 0.2);
             }
         }
     }

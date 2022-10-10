@@ -8,7 +8,7 @@ const UserNewTable = () => {
             <span className="title">New Join Members</span>
             <ul className="list">
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -19,7 +19,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -30,7 +30,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -41,7 +41,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -52,7 +52,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -63,7 +63,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -74,7 +74,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -85,7 +85,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -96,7 +96,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -107,7 +107,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>
@@ -118,7 +118,7 @@ const UserNewTable = () => {
                     </button>
                 </li>
                 <li className="item">
-                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="" />
+                    <img className='newUserImg' src="https://pbs.twimg.com/profile_images/856929517721485312/IBn9JM0v_400x400.jpg" alt="newUser" />
                     <div className="userInfo">
                         <span className="userName">Arife Usakli</span>
                         <span className="userTitle">Teacher</span>

@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../styles/dataTable.scss"
 import { userColumns, userRows } from '../datatableSource'
 import { Link } from 'react-router-dom'
 
-const DataTable = () => {
+const DataTable = ({ title }) => {
+    console.log(title)
+    const [data, setData] = useState(userRows)
+
+    const handleDelete = (id) => {
+        setData(data.filter(item => item.id !== id))
+    }
 
     return (
         <div className='datatable'>
@@ -13,7 +19,7 @@ const DataTable = () => {
                     Add new
                 </Link>
             </div>
-            <table>
+            <table className='dataGrid'>
                 <thead>
                     <tr>
                         <td><input type="checkbox" /></td>
@@ -23,7 +29,7 @@ const DataTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {userRows.map(row => (
+                    {data.map(row => (
                         <tr key={row.id} className='row'>
                             <td><input type="checkbox" /></td>
                             <td >{row.id}</td>
@@ -33,10 +39,10 @@ const DataTable = () => {
                             <td>{row.age}</td>
                             <td className={`cellWithStatus ${row.status}`}>{row.status}</td>
                             <td className='action'>
-                                <Link to="/users/test">
+                                <Link to={"/users/" + row.id}>
                                     <button className='view-btn'>view</button>
                                 </Link>
-                                <button className='delete-btn'>delete</button>
+                                <button className='delete-btn' onClick={() => handleDelete(row.id)}>delete</button>
                             </td>
                         </tr>
                     ))}

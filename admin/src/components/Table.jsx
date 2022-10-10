@@ -5,7 +5,7 @@ const Table = () => {
 
     const rows = [
         {
-            id: 123456,
+            id: 1234536,
             product: "acer nitro 5",
             img: "https://i.nefisyemektarifleri.com/2021/11/18/istanbulun-en-meshur-12-cikolata-dukkani-9.jpg",
             customer: "aelita",
@@ -14,7 +14,7 @@ const Table = () => {
             method: "cash on delivery",
             status: "Approved"
         }, {
-            id: 123457,
+            id: 1232457,
             product: "playstation5",
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5IIkvmU884df0Kcwy6bU2wfsp9qobzxzKEts19oxbg&s",
             customer: "odd",
@@ -24,7 +24,45 @@ const Table = () => {
             status: "Pending"
         },
         {
-            id: 123257,
+            id: 12316257,
+            product: "playstation5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5IIkvmU884df0Kcwy6bU2wfsp9qobzxzKEts19oxbg&s",
+            customer: "odd",
+            date: "1 March",
+            amount: 900,
+            method: "online payment",
+            status: "Pending"
+        }, {
+            id: 1213457,
+            product: "playstation5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5IIkvmU884df0Kcwy6bU2wfsp9qobzxzKEts19oxbg&s",
+            customer: "odd",
+            date: "1 March",
+            amount: 900,
+            method: "online payment",
+            status: "Pending"
+        },
+        {
+            id: 1293257,
+            product: "playstation5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5IIkvmU884df0Kcwy6bU2wfsp9qobzxzKEts19oxbg&s",
+            customer: "odd",
+            date: "1 March",
+            amount: 900,
+            method: "online payment",
+            status: "Pending"
+        }, {
+            id: 1234507,
+            product: "playstation5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5IIkvmU884df0Kcwy6bU2wfsp9qobzxzKEts19oxbg&s",
+            customer: "odd",
+            date: "1 March",
+            amount: 900,
+            method: "online payment",
+            status: "Pending"
+        },
+        {
+            id: 1236257,
             product: "playstation5",
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5IIkvmU884df0Kcwy6bU2wfsp9qobzxzKEts19oxbg&s",
             customer: "odd",
@@ -37,6 +75,7 @@ const Table = () => {
 
     return (
         <div className='table'>
+            <div className="listTitle">Latest Transactions</div>
             <table>
                 <thead>
                     <tr>
@@ -61,8 +100,8 @@ const Table = () => {
                                 </div>
                             </td>
                             <td>{row.customer}</td>
-                            <td>{row.date}</td>
-                            <td>{row.amount}</td>
+                            <td className='date'>{row.date}</td>
+                            <td className='amount'>{row.amount}</td>
                             <td>{row.method}</td>
                             <td>
                                 <span className={`status ${row.status}`}>{row.status}</span>

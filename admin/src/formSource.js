@@ -48,19 +48,19 @@ export const productInputs = [
         id: 1,
         label: "Title",
         type: "text",
-        placeholder: "Apple Macbook Pro",
+        placeholder: "Inception",
     },
     {
         id: 2,
         label: "Description",
         type: "text",
-        placeholder: "Description",
+        placeholder: "Ürün açıklaması giriniz",
     },
     {
         id: 3,
         label: "Category",
         type: "text",
-        placeholder: "Computers",
+        placeholder: "Belçika çikolatalı tatlılar",
     },
     {
         id: 4,
