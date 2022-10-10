@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../styles/navbar.scss"
 import { AiOutlineSearch, AiOutlineFullscreen, AiOutlineUnorderedList } from "react-icons/ai"
-import { MdLanguage, MdOutlineDarkMode, MdNotifications, MdChatBubble } from "react-icons/md"
+import { MdLanguage, MdOutlineDarkMode, MdNotifications, MdChatBubble, MdLightMode } from "react-icons/md"
+import { DarkModeContext } from '../context/darkModeContext'
 
 const Navbar = () => {
+
+
+    const { dispatch, darkMode } = useContext(DarkModeContext);
+
     return (
         <div className='navbar'>
             <div className="wrapper">
@@ -16,8 +21,8 @@ const Navbar = () => {
                         <MdLanguage className='icon' />
                         English
                     </div>
-                    <div className="item">
-                        <MdOutlineDarkMode className='icon' />
+                    <div className="item" onClick={() => dispatch({ type: "TOGGLE" })}>
+                        {darkMode ? <MdLightMode className='icon' /> : <MdOutlineDarkMode className='icon' />}
                     </div>
                     <div className="item">
                         <AiOutlineFullscreen className='icon' />

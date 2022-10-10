@@ -9,6 +9,7 @@ import Table from '../components/Table'
 import UserNewTable from '../components/UserNewTable'
 
 const Home = () => {
+
     return (
         <div className="home">
             <Sidebar />

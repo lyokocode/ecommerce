@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../styles/sidebar.scss"
 import { MdDashboard, MdNotifications, MdSettingsSystemDaydream, MdOutlinePsychology, MdSettingsApplications, MdLogout } from "react-icons/md"
 import { AiOutlineUser, AiFillCreditCard } from "react-icons/ai"
@@ -6,9 +6,12 @@ import { SiHomeassistantcommunitystore } from "react-icons/si"
 import { FaTruck } from "react-icons/fa"
 import { BiStats, BiUserCircle } from "react-icons/bi"
 import { Link } from 'react-router-dom'
+import { DarkModeContext } from '../context/darkModeContext'
 
 
 const Sidebar = () => {
+
+    const { dispatch } = useContext(DarkModeContext);
     return (
         <div className='sidebar'>
             <div className="top">
@@ -79,8 +82,8 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="bottom">
-                <div className="color-option"></div>
-                <div className="color-option"></div>
+                <button className="color-option" onClick={() => dispatch({ type: "LIGHT" })}></button>
+                <button className="color-option" onClick={() => dispatch({ type: "DARK" })}></button>
             </div>
         </div>
     )
