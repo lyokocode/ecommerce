@@ -1,6 +1,5 @@
 export const products = [
     {
-        _id: "1",
         name: "White Chocolate Brownie",
         slug: "white-chocolate-brownie",
         category: "brownie",
@@ -13,7 +12,6 @@ export const products = [
         desc: "iki kek arasına, özel pastacı kreması, muz ve çilek; üzerine belçika çikolatası ve krep kırığı"
     },
     {
-        _id: "2",
         name: "Vişneli Brownie",
         slug: "visne-brownie",
         category: "brownie",
@@ -26,7 +24,6 @@ export const products = [
         desc: "iki kek arasına, özel pastacı kreması, muz ve çilek; üzerine belçika çikolatası ve krep kırığı"
     },
     {
-        _id: "3",
         name: "Forest Fruit Brownie",
         slug: "forest-fruit-brownie",
         category: "brownie",
@@ -39,7 +36,6 @@ export const products = [
         desc: "iki kek arasına, özel pastacı kreması, muz ve çilek; üzerine belçika çikolatası ve krep kırığı"
     },
     {
-        _id: "9",
         name: "Brownie Kutusu",
         slug: "kutu-brownie",
         category: "brownie",
@@ -53,7 +49,6 @@ export const products = [
     },
 
     {
-        _id: "4",
         name: "San Sebastian Chesscake",
         slug: "sanSebastian-cheescake",
         category: "chesscake",
@@ -66,7 +61,6 @@ export const products = [
         desc: "iki kek arasına, özel pastacı kreması, muz ve çilek; üzerine belçika çikolatası ve krep kırığı"
     },
     {
-        _id: "5",
         name: "Frambuazlı Chesscake",
         slug: "frambuaz-cheescake",
         category: "chesscake",
@@ -79,7 +73,6 @@ export const products = [
         desc: "iki kek arasına, özel pastacı kreması, muz ve çilek; üzerine belçika çikolatası ve krep kırığı"
     },
     {
-        _id: "6",
         name: "Parça Çikolatalı Cookie",
         slug: "cookie",
         category: "cookie",
@@ -92,7 +85,6 @@ export const products = [
         desc: "iki kek arasına, özel pastacı kreması, muz ve çilek; üzerine belçika çikolatası ve krep kırığı"
     },
     {
-        _id: "5",
         name: "Frambuazlı Chesscake",
         slug: "frambuaz-cheescake",
         category: "chesscake",
