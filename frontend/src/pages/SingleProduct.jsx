@@ -8,7 +8,7 @@ const SingleProduct = () => {
     const params = useParams()
     const { slug, category } = params
 
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState({})
 
     useEffect(() => {
         const fetchItem = async () => {
@@ -32,7 +32,7 @@ const SingleProduct = () => {
                 <div className="info-container">
                     <h1 className='title'></h1>
                     <p className='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia reprehenderit praesentium, facilis consectetur harum.</p>
-                    <span className='price'>${items.price}</span>
+                    <span className='price'>{items.price}₺</span>
 
                     <div className='add-container'>
                         <div className="amount-container">
