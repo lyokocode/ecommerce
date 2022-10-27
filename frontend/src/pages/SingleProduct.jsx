@@ -8,31 +8,31 @@ const SingleProduct = () => {
     const params = useParams()
     const { slug, category } = params
 
-    const [items, setItems] = useState({})
+    const [item, setItem] = useState([])
 
     useEffect(() => {
         const fetchItem = async () => {
             const { data } = await axios.get(`/api/products/${category}/${slug}`)
-            setItems(data)
+            setItem(data[0])
         }
         fetchItem()
     }, [slug])
-
+    console.log(item)
 
     return (
 
         <div className='singleProduct-container' >
 
 
-            <h1>{items.name}</h1>
+            <h1>{item.name}</h1>
             <div className="wrapper">
                 <div className="image-container">
-                    <img src={items.image} alt="" />
+                    <img src={item.image} alt="" />
                 </div>
                 <div className="info-container">
                     <h1 className='title'></h1>
-                    <p className='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia reprehenderit praesentium, facilis consectetur harum.</p>
-                    <span className='price'>{items.price}₺</span>
+                    <p className='description'>{item.description}</p>
+                    <span className='price'>{item.price}₺</span>
 
                     <div className='add-container'>
                         <div className="amount-container">

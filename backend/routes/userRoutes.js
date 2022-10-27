@@ -1,14 +1,16 @@
 import express from "express"
+import asyncHandler from "express-async-handler";
+import User from "../models/userModels.js";
 
 const userRoute = express.Router()
 
-userRoute.get('/usertest', (req, res) => {
-    res.send('user test is succesfull');
-});
+userRoute.get('/', asyncHandler(
+    async (req, res) => {
+        const users = await User.find({})
+        res.json(users)
+    }
+));
 
-userRoute.post('/userpost', (req, res) => {
-    const name = req.body.name;
-    res.send("your name is" + name)
-});
+
 
 export default userRoute

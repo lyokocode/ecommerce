@@ -29,8 +29,7 @@ app.get('/', (req, res) => {
 
 app.listen(process.env.PORT || 5000, console.log("server is running port 5000"))
 
-// import { categories } from "./data/Categories.js"
-// import { products } from "./data/Products.js"
+
     // // load product from server
     // app.get("/api/products", (req, res) => {
     //     res.json(products)
