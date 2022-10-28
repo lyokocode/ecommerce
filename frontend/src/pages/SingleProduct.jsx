@@ -17,7 +17,6 @@ const SingleProduct = () => {
         }
         fetchItem()
     }, [slug])
-    console.log(item)
 
     return (
 

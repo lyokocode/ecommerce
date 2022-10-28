@@ -111,9 +111,9 @@ export const products = [
     },
     {
         name: "Hindi Füme Sandviç",
-        slug: "hindi-füme-sandvic",
+        slug: "hindi-fume-sandvic",
         category: "sandwiches",
-        image: "/images/hindifüme-sandvic.jpg",
+        image: "/images/hindifume-sandvic.jpg",
         description: "Klasik ya da esmer ciabata ekmeğine yapılır. Minimum 40 adet sipariş verebilirsiniz.",
         price: 20,
         countInStock: 100,
