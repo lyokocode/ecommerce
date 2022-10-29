@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useReducer, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useDispatch } from "react-redux"
 import { addProduct } from '../redux/cartRedux'
+import { Helmet } from "react-helmet-async"
 import "../styles/singleProduct.scss"
 import Rating from '../components/Rating'
 import Loading from '../components/Loading'
@@ -62,14 +62,17 @@ const SingleProduct = () => {
         }
     };
 
-
-
     return (
         <>
             {
                 loading ? (<Loading />)
                     : error ? (<div>{error}</div>)
                         : (<div className='singleProduct-container' >
+                            <Helmet>
+                                <title>
+                                    {`theAtelier-${product.name}`}
+                                </title>
+                            </Helmet>
                             <h1>{product.name}</h1>
                             <div className="wrapper">
                                 <div className="image-container">
