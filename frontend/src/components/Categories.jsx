@@ -3,6 +3,7 @@ import "../styles/category.scss"
 import CategoryItem from './CategoryItem'
 import axios from "axios"
 import Loading from './Loading';
+import MessageBox from './MessageBox';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -47,7 +48,7 @@ const Categories = () => {
                     <div><Loading /></div>
                 )
                     : error ? (
-                        <div>{error}</div>
+                        <MessageBox variant="danger">{error}</MessageBox>
                     )
                         : (
 

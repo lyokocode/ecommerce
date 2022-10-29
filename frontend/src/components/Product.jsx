@@ -1,9 +1,18 @@
-import React from 'react'
+import { useContext } from 'react'
+import { Store } from '../Store';
 import { AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai"
 import { MdOutlineFavoriteBorder } from "react-icons/md"
 import { Link } from 'react-router-dom'
 
 const Product = ({ item }) => {
+
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const addToCartHandler = () => {
+        ctxDispatch({
+            type: 'CART_ADD_ITEM',
+            payload: { ...item, quantity: 1 },
+        });
+    };
 
     return (
         <div className='deneme'>
@@ -11,7 +20,7 @@ const Product = ({ item }) => {
                 <div className="circle"></div>
                 <img src={item.image} alt="" />
                 <div className="info">
-                    <span className='icon-container'><AiOutlineShoppingCart className='product-icon' /></span>
+                    <span onClick={addToCartHandler} className='icon-container'><AiOutlineShoppingCart className='product-icon' /></span>
                     <Link to={`/products/${item.category}/${item.slug}`} >
                         <span className='icon-container'><AiOutlineSearch className='product-icon' /></span>
                     </Link>

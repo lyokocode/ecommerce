@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../styles/navbar.scss"
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai"
 import { MdOutlineLanguage } from "react-icons/md"
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { Store } from '../Store';
 
 const Navbar = () => {
 
-    const quantity = useSelector(state => state.cart.quantity)
-    console.log(quantity)
+    const { state } = useContext(Store);
+    const { cart } = state;
+    console.log(cart.cartItems.length)
 
     return (
         <header className='header-container'>
@@ -28,7 +29,7 @@ const Navbar = () => {
                     <Link to="register" className="menu-item">REGISTER</Link>
                     <Link to="login" className="menu-item">SIGN IN</Link>
                     <Link to="cart" className="menu-item notification"><AiOutlineShoppingCart />
-                        <span className='badge'>{quantity}</span>
+                        <span className='badge'>{cart.cartItems.length}</span>
                     </Link>
                 </nav>
             </div>

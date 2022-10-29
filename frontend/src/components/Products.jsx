@@ -4,6 +4,7 @@ import Product from './Product'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import Loading from './Loading'
+import MessageBox from './MessageBox'
 
 
 const reducer = (state, action) => {
@@ -52,9 +53,9 @@ const Products = () => {
                 loading ? (
                     <div><Loading /></div>
                 )
-                    : error ? (
-                        <div>{error}</div>
-                    )
+                    : error ?
+                        (<MessageBox variant="danger">{error}</MessageBox>)
+
                         : (
 
                             product.map(item => (

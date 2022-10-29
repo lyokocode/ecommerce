@@ -1,11 +1,12 @@
 import axios from 'axios'
-import React, { useEffect, useReducer, useState } from 'react'
+import React, { useContext, useEffect, useReducer } from 'react'
 import { useParams } from 'react-router-dom'
-import { addProduct } from '../redux/cartRedux'
 import { Helmet } from "react-helmet-async"
 import "../styles/singleProduct.scss"
 import Rating from '../components/Rating'
 import Loading from '../components/Loading'
+import MessageBox from '../components/MessageBox'
+import { Store } from '../Store';
 
 
 const reducer = (state, action) => {
@@ -47,26 +48,18 @@ const SingleProduct = () => {
         fetchItem();
     }, [slug, category]);
 
-    console.log(category)
-    const [quantity, setQuantity] = useState(1);
-    // const dispatch = useDispatch()
-    const handleClick = () => {
-        dispatch(addProduct({ ...product, quantity }))
-    }
-
-    const handleQuantity = (type) => {
-        if (type === "dec") {
-            quantity > 1 && setQuantity(quantity - 1);
-        } else {
-            setQuantity(quantity + 1);
-        }
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const addToCartHandler = () => {
+        ctxDispatch({
+            type: 'CART_ADD_ITEM',
+            payload: { ...product, quantity: 1 },
+        });
     };
-
     return (
         <>
             {
                 loading ? (<Loading />)
-                    : error ? (<div>{error}</div>)
+                    : error ? (<MessageBox variant="danger">{error}</MessageBox>)
                         : (<div className='singleProduct-container' >
                             <Helmet>
                                 <title>
@@ -85,11 +78,11 @@ const SingleProduct = () => {
                                     <Rating rating={product.rating} numReviews={product.numReviews} />
                                     <div className='add-container'>
                                         <div className="amount-container">
-                                            <button className='counter' onClick={() => handleQuantity("dec")}>-</button>
-                                            <span className='amount' >{quantity}</span>
-                                            <button className='counter' onClick={() => handleQuantity("inc")} >+</button>
+                                            <button className='counter'>-</button>
+                                            <span className='amount' ></span>
+                                            <button className='counter'>+</button>
                                         </div>
-                                        <button className='add-button' onClick={handleClick} >ADD TO CART</button>
+                                        <button className='add-button' onClick={addToCartHandler}  >ADD TO CART</button>
                                     </div>
                                 </div>
                             </div>
