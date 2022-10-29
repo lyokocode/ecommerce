@@ -18,7 +18,10 @@ const Product = ({ item }) => {
                     <span className='icon-container'><MdOutlineFavoriteBorder className='product-icon' /></span>
                 </div>
             </div>
-            {item.name}
+            <div className='info'>
+                <div className='name'>{item.name}</div>
+                <div className='price'>{item.price}₺</div>
+            </div>
         </div>
     )
 }

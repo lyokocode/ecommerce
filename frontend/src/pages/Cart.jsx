@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../styles/cart.scss"
+import { useSelector } from 'react-redux'
 
 const Cart = () => {
-    const type = "filled"
+    let type = "filled"
+    // type = "deneme"
+    const cart = useSelector(state => state.cart)
+
+
     return (
         <div className='cart-container'>
             <div className="wrapper">
@@ -17,61 +22,47 @@ const Cart = () => {
                 </div>
                 <div className="bottom">
                     <div className="info">
-                        <div className="product">
-                            <div className="product-detail">
-                                <img src="images/hangover.jpg" alt="" />
-                                <div className="details">
-                                    <h1 className='product-name'><b>PRODUCT:</b>Hangover</h1>
-                                    <h1 className='product-id'><b>ID:</b>24578954513</h1>
-                                </div>
-                            </div>
-                            <div className="price-detail ">
-                                <div className="product-amount">
-                                    <button className="counter">-</button>
-                                    <span className='amount'>2</span>
-                                    <button className="counter">+</button>
+                        {cart.products.map(product => (
 
+                            <div className="product" key={product._id}>
+                                <div className="product-detail">
+                                    <img src={product.image} alt="" />
+                                    <div className="details">
+                                        <h1 className='product-name'><b>PRODUCT:</b>{product.name}</h1>
+                                        <h1 className='product-id'><b>ID:</b>{product._id}</h1>
+                                    </div>
                                 </div>
-                                <div className='product-price'>$45</div>
-                            </div>
-                        </div>
-                        {/* 2. ürün */}
-                        <div className="product">
-                            <div className="product-detail">
-                                <img src="images/beauty.jpg" alt="" />
-                                <div className="details">
-                                    <h1 className='product-name'><b>PRODUCT:</b>beauty</h1>
-                                    <h1 className='product-id'><b>ID:</b>5787543123789</h1>
-                                </div>
-                            </div>
-                            <div className="price-detail ">
-                                <div className="product-amount">
-                                    <button className="counter">-</button>
-                                    <span className='amount'>1</span>
-                                    <button className="counter">+</button>
+                                <div className="price-detail ">
+                                    <div className="product-amount">
+                                        <button className="counter">-</button>
+                                        <span className='amount'>{product.quantity}</span>
+                                        <button className="counter" >+</button>
 
+                                    </div>
+                                    <div className='product-price'>{product.price * product.quantity}</div>
                                 </div>
-                                <div className='product-price'>$40</div>
                             </div>
-                        </div>
+                        ))
+                        }
+
                     </div>
                     <div className="summary">
                         <h1 className='title'>ORDER SUMMARY</h1>
                         <div className="summary-item">
                             <span className="text">SUBTOTAL</span>
-                            <span className="price">$130</span>
+                            <span className="price">{cart.total}₺</span>
                         </div>
                         <div className="summary-item">
                             <span className="text">Estimated Shipping</span>
-                            <span className="price">$5.90</span>
+                            <span className="price">20.90₺</span>
                         </div>
                         <div className="summary-item">
                             <span className="text">Shipping Discount</span>
-                            <span className="price">$-5.90</span>
+                            <span className="price">20.90₺</span>
                         </div>
                         <div className="summary-item total">
                             <span className="text">TOTAL</span>
-                            <span className="price">$130</span>
+                            <span className="price">{cart.total}₺</span>
                         </div>
                         <button>checkout now</button>
                     </div>
