@@ -8,6 +8,7 @@ const Cart = () => {
     const cart = useSelector(state => state.cart)
 
 
+
     return (
         <div className='cart-container'>
             <div className="wrapper">
@@ -34,12 +35,12 @@ const Cart = () => {
                                 </div>
                                 <div className="price-detail ">
                                     <div className="product-amount">
-                                        <button className="counter">-</button>
-                                        <span className='amount'>{product.quantity}</span>
-                                        <button className="counter" >+</button>
+                                        {/* <button className="counter">-</button> */}
+                                        <span className='amount'>{product.quantity} adet</span>
+                                        {/* <button className="counter" onClick={() => product.quantity += 1} >+</button> */}
 
                                     </div>
-                                    <div className='product-price'>{product.price * product.quantity}</div>
+                                    <div className='product-price'>{product.price * product.quantity}₺</div>
                                 </div>
                             </div>
                         ))
