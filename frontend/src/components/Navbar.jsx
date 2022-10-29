@@ -9,7 +9,6 @@ const Navbar = () => {
 
     const { state } = useContext(Store);
     const { cart } = state;
-    console.log(cart.cartItems.length)
 
     return (
         <header className='header-container'>
@@ -29,7 +28,7 @@ const Navbar = () => {
                     <Link to="register" className="menu-item">REGISTER</Link>
                     <Link to="login" className="menu-item">SIGN IN</Link>
                     <Link to="cart" className="menu-item notification"><AiOutlineShoppingCart />
-                        <span className='badge'>{cart.cartItems.length}</span>
+                        <span className='badge'>{cart.cartItems.reduce((a, c) => a + c.quantity, 0)}</span>
                     </Link>
                 </nav>
             </div>

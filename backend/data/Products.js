@@ -39,7 +39,7 @@ export const products = [
         image: "/images/sansebastian-cheescake.jpg",
         description: "Hafif yanık İspanyol san sebastian. Tam porsiyon halinde sipariş verebilirsiniz.",
         price: 230,
-        countInStock: 70,
+        countInStock: 3,
         rating: 5,
         numReviews: 350,
     },

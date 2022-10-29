@@ -1,12 +1,35 @@
-import React, { useState } from 'react'
+import { useContext } from 'react';
+import { Store } from '../Store';
+import { Helmet } from 'react-helmet-async';
 import "../styles/cart.scss"
-import { useSelector } from 'react-redux'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     let type = "filled"
     // type = "deneme"
-    const cart = useSelector(state => state.cart)
+    const navigate = useNavigate();
 
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const { cart: { cartItems }, } = state;
+    const updateCartHandler = async (item, quantity) => {
+        const { data } = await axios.get(`/api/products/${item._id}`);
+        if (item.countInStock < quantity) {
+            window.alert('Sorry. Product is out of stock');
+            return;
+        }
+        ctxDispatch({
+            type: 'CART_ADD_ITEM',
+            payload: { ...item, quantity },
+        });
+    };
+    const removeItemHandler = (item) => {
+        ctxDispatch({ type: 'CART_REMOVE_ITEM', payload: item });
+    };
+
+    const checkoutHandler = () => {
+        navigate('/signin?redirect=/shipping');
+    };
 
 
     return (
@@ -23,7 +46,7 @@ const Cart = () => {
                 </div>
                 <div className="bottom">
                     <div className="info">
-                        {cart.products.map(product => (
+                        {cartItems.map(product => (
 
                             <div className="product" key={product._id}>
                                 <div className="product-detail">
@@ -35,9 +58,18 @@ const Cart = () => {
                                 </div>
                                 <div className="price-detail ">
                                     <div className="product-amount">
-                                        {/* <button className="counter">-</button> */}
+                                        <button className="counter" disabled={product.quantity === 1}
+                                            onClick={() => updateCartHandler(product, product.quantity - 1)}
+                                        >
+                                            -
+                                        </button>
                                         <span className='amount'>{product.quantity} adet</span>
-                                        {/* <button className="counter" onClick={() => product.quantity += 1} >+</button> */}
+                                        <button
+                                            className="counter" disabled={product.quantity === product.countInStock}
+                                            onClick={() => updateCartHandler(product, product.quantity + 1)}
+                                        >
+                                            +
+                                        </button>
 
                                     </div>
                                     <div className='product-price'>{product.price * product.quantity}₺</div>
@@ -50,8 +82,12 @@ const Cart = () => {
                     <div className="summary">
                         <h1 className='title'>ORDER SUMMARY</h1>
                         <div className="summary-item">
+                            <span className="text">Items</span>
+                            <span className="price">{cartItems.reduce((a, c) => a + c.quantity, 0)}</span>
+                        </div>
+                        <div className="summary-item">
                             <span className="text">SUBTOTAL</span>
-                            <span className="price">{cart.total}₺</span>
+                            <span className="price">{cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}₺</span>
                         </div>
                         <div className="summary-item">
                             <span className="text">Estimated Shipping</span>
@@ -63,7 +99,7 @@ const Cart = () => {
                         </div>
                         <div className="summary-item total">
                             <span className="text">TOTAL</span>
-                            <span className="price">{cart.total}₺</span>
+                            <span className="price">{cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}₺</span>
                         </div>
                         <button>checkout now</button>
                     </div>

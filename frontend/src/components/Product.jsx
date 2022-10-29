@@ -3,15 +3,26 @@ import { Store } from '../Store';
 import { AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai"
 import { MdOutlineFavoriteBorder } from "react-icons/md"
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const Product = ({ item }) => {
 
     const { state, dispatch: ctxDispatch } = useContext(Store);
-    const addToCartHandler = () => {
+    const { cart } = state
+    const addToCartHandler = async () => {
+        const existItem = cart.cartItems.find((x) => x._id === item._id);
+        const quantity = existItem ? existItem.quantity + 1 : 1;
+        const { data } = await axios.get(`/api/products/${item._id}`);
+        if (item.countInStock < quantity) {
+            window.alert('Sorry. Product is out of stock');
+            return;
+        }
         ctxDispatch({
             type: 'CART_ADD_ITEM',
             payload: { ...item, quantity: 1 },
+            payload: { ...item, quantity },
         });
+        console.log(item.countInStock -= 1)
     };
 
     return (
