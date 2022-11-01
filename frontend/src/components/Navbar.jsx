@@ -25,7 +25,6 @@ const Navbar = () => {
                 </Link>
                 <nav className='right'>
                     <Link to="about" className="menu-item">ABOUT</Link>
-                    <Link to="register" className="menu-item">REGISTER</Link>
                     <Link to="login" className="menu-item">SIGN IN</Link>
                     <Link to="cart" className="menu-item notification"><AiOutlineShoppingCart />
                         <span className='badge'>{cart.cartItems.reduce((a, c) => a + c.quantity, 0)}</span>

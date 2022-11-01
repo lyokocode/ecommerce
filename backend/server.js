@@ -10,8 +10,7 @@ import { errorHandler, notFound } from "./Middleware/Errors.js"
 
 const app = express()
 dotenv.config()
-const json = express.json()
-app.use(json)
+app.use(express.json());
 
 // API
 
@@ -20,6 +19,11 @@ app.use('/api/auth', authRoute)
 app.use('/api/products', productRoute)
 app.use('/api/categories', categoryRoute)
 app.use('/api/import', ImportData)
+app.use(express.urlencoded({ extended: true }));
+
+app.use((err, req, res, next) => {
+    res.status(500).send({ message: err.message });
+});
 
 // ERROR HANDLER
 app.use(notFound)

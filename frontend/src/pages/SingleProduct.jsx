@@ -49,12 +49,22 @@ const SingleProduct = () => {
     }, [slug, category]);
 
     const { state, dispatch: ctxDispatch } = useContext(Store);
-    const addToCartHandler = () => {
+    const { cart } = state
+    const addToCartHandler = async (product) => {
+        const existItem = cart.cartItems.find((x) => x._id === product._id);
+        const quantity = existItem ? existItem.quantity + 1 : 1;
+        const { data } = await axios.get(`/api/products/${product._id}`);
+        if (product.countInStock < quantity) {
+            window.alert('Sorry. Product is out of stock');
+            return;
+        }
         ctxDispatch({
             type: 'CART_ADD_ITEM',
             payload: { ...product, quantity: 1 },
+            payload: { ...product, quantity },
         });
     };
+
     return (
         <>
             {
@@ -77,12 +87,12 @@ const SingleProduct = () => {
                                     <span className='price'>{product.price}₺</span>
                                     <Rating rating={product.rating} numReviews={product.numReviews} />
                                     <div className='add-container'>
-                                        <div className="amount-container">
+                                        {/* <div className="amount-container">
                                             <button className='counter'>-</button>
-                                            <span className='amount' ></span>
+                                            <span className='amount' >1</span>
                                             <button className='counter'>+</button>
-                                        </div>
-                                        <button className='add-button' onClick={addToCartHandler}  >ADD TO CART</button>
+                                        </div> */}
+                                        <button className='add-button' onClick={() => addToCartHandler(product)}  >{product.countInStock < 2 ? <span> OUT OF STOCK </span> : <span> ADD TO CART </span>}</button>
                                     </div>
                                 </div>
                             </div>

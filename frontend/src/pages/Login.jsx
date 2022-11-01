@@ -7,12 +7,15 @@ const Login = () => {
         <div className='login-container'>
             <div className="wrapper">
                 <h1 className='title'>SIGN IN</h1>
-                <form >
-                    <input type="text" placeholder='name' />
-                    <input type="text" placeholder='password' />
-                    <button className='login-btn'>Login </button>
+                <form onSubmit={e => e.preventDefault()}>
+                    <input type="text" placeholder='name' required />
+                    <input type="password" placeholder='password' required />
+                    <button className='login-btn' >Login </button>
                     <Link>Do not you remember the password?   </Link>
-                    <Link to="/register">create a new account   </Link>
+                    <span>
+                        Don't have an account?
+                        <Link to="/register">  Sign up </Link>
+                    </span>
                 </form>
             </div>
         </div>
