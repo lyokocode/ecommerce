@@ -1,7 +1,8 @@
 import React from 'react'
 import Home from './pages/Home'
-import About from './pages/About'
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Newsletter from './components/Newsletter';
@@ -15,6 +16,7 @@ const App = () => {
   return (
 
     <BrowserRouter>
+      <ToastContainer limit={1} position="bottom-center" />
       <div className='aelita'>
         <Navbar />
         <main className='route'>
