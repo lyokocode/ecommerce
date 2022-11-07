@@ -10,7 +10,7 @@ authRoute.post('/register', asyncHandler(async (req, res) => {
     const newUser = await new User({
         name: req.body.name,
         email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, user.password)
+        password: bcrypt.hashSync(req.body.password, User.password)
 
     });
     try {

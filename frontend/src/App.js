@@ -4,13 +4,14 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Newsletter from './components/Newsletter';
+// import Footer from './components/Footer';
+// import Newsletter from './components/Newsletter';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Cart from './pages/Cart';
 import SingleProduct from './pages/SingleProduct';
 import Products from './components/Products';
+import ShipingAddress from './pages/ShipingAddress';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route exact path='/register' element={<Register />} />
             <Route exact path='/products/:category' element={<Products />} />
             <Route exact path='/products/:category/:slug' element={<SingleProduct />} />
+            <Route exact path='/shipping' element={<ShipingAddress />} />
           </Routes>
         </main>
       </div>

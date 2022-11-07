@@ -9,13 +9,12 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     let type = "filled"
-    // type = "deneme"
     const navigate = useNavigate();
 
     const { state, dispatch: ctxDispatch } = useContext(Store);
     const { cart: { cartItems }, } = state;
     const updateCartHandler = async (item, quantity) => {
-        const { product } = await axios.get(`/api/products/${item._id}`);
+        const { data } = await axios.get(`/api/products/${item._id}`);
         if (item.countInStock < quantity) {
             window.alert('Sorry. Product is out of stock');
             return;
@@ -30,10 +29,9 @@ const Cart = () => {
     };
 
     const checkoutHandler = () => {
-        navigate('/login');
+        navigate('/login?reditect=/shiping');
     };
 
-    console.log(cartItems.length)
 
     return (
         <>

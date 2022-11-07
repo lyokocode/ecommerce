@@ -1,0 +1,107 @@
+.shippingContainer {
+    max-width: 40rem;
+    padding: 30px 2rem 0;
+    margin: 0 auto;
+    height: 70vh;
+    // background-color: red;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: #737888;
+    }
+
+    hr {
+        height: 1px;
+        width: 100%;
+        background-color: #f7f7fa;
+        border: 0;
+        margin: 2rem 0;
+    }
+
+
+    .form {
+        display: grid;
+        grid-gap: 1rem;
+
+        .button {
+            background-color: #000;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: block;
+            color: #fff;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            border: 0;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        .button:focus-visible {
+            background-color: #333;
+        }
+
+        hr {
+            height: 1px;
+            width: 100%;
+            background-color: #f7f7fa;
+            border: 0;
+            margin: 2rem 0;
+        }
+
+        .field {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f7f7fa;
+            padding: .5rem;
+            border-radius: .25rem;
+        }
+
+        .field__label {
+            color: #737888;
+            font-size: 0.6rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem
+        }
+
+        .field__input {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            outline: 0;
+            font-weight: bold;
+            font-size: 1rem;
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: transparent;
+
+            .field:focus-within {
+                border-color: #000;
+            }
+        }
+
+
+        .fields {
+            display: grid;
+            grid-gap: 1rem;
+        }
+
+        .fields--2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .fields--3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    }
+
+
+}

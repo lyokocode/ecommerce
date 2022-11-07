@@ -1,4 +1,4 @@
-import { Link, redirect, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "../styles/login.scss"
 import axios from "axios"
 import { useContext, useState, useEffect } from 'react'
@@ -6,13 +6,12 @@ import { Store } from "../Store"
 import { toast } from 'react-toastify'
 
 const Login = () => {
-    const redirect = "/"
-    const navigate = useNavigate();
     const { search } = useLocation();
+    const navigate = useNavigate();
     const redirectInUrl = new URLSearchParams(search).get('redirect');
+    const redirect = redirectInUrl ? redirectInUrl : "/"
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
     const { state, dispatch: ctxDispatch } = useContext(Store);
     const { userInfo } = state;
 
@@ -25,7 +24,7 @@ const Login = () => {
             })
             ctxDispatch({ type: 'USER_SIGNIN', payload: data });
             localStorage.setItem('userInfo', JSON.stringify(data));
-            navigate(redirect || '/');
+            navigate(redirect);
             console.log(data)
         } catch (error) {
             toast.error("invalid email or password")
