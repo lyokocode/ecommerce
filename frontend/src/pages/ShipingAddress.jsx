@@ -87,7 +87,7 @@ const ShipingAddress = () => {
                     </label>
                     <div className="fields fields--3">
                         <label className="field">
-                            <span className="field__label" >Zip code</span>
+                            <span className="field__label" >Postal code</span>
                             <input className="field__input" type="text" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} />
                         </label>
                         <label className="field">

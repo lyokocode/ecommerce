@@ -8,10 +8,13 @@ import { toast } from 'react-toastify'
 const Login = () => {
     const { search } = useLocation();
     const navigate = useNavigate();
+
     const redirectInUrl = new URLSearchParams(search).get('redirect');
     const redirect = redirectInUrl ? redirectInUrl : "/"
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
     const { state, dispatch: ctxDispatch } = useContext(Store);
     const { userInfo } = state;
 

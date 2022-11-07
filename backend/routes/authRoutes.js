@@ -10,18 +10,19 @@ authRoute.post('/register', asyncHandler(async (req, res) => {
     const newUser = await new User({
         name: req.body.name,
         email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, User.password)
+        password: bcrypt.hashSync(req.body.password, User.password),
 
     });
-    try {
-        const savedUser = await newUser.save()
-        res.status(201).json(savedUser)
-    } catch (err) {
-        res.status(500).json(err)
-    }
+    const user = await newUser.save();
+    res.send({
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        isAdmin: user.isAdmin,
+        token: generateToken(user)
+    })
 })
 );
-
 
 authRoute.post(
     '/login',

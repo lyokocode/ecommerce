@@ -12,7 +12,7 @@ const Cart = () => {
     const navigate = useNavigate();
 
     const { state, dispatch: ctxDispatch } = useContext(Store);
-    const { cart: { cartItems }, } = state;
+    const { cart: { cartItems } } = state;
     const updateCartHandler = async (item, quantity) => {
         const { data } = await axios.get(`/api/products/${item._id}`);
         if (item.countInStock < quantity) {
@@ -29,7 +29,7 @@ const Cart = () => {
     };
 
     const checkoutHandler = () => {
-        navigate('/login?reditect=/shiping');
+        navigate('/login?reditect=/shipping');
     };
 
 
